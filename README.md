@@ -1,2 +1,0 @@
-# RyanStonegraber
-Portfolio

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VonglisEnterprises-ReviewForm</title>
+
+	<link rel="stylesheet" href="Vonglis_CSS.css">
+	<style>
+	fieldset label{
+		  position:absolute; }
+	fieldset input{
+			 	   margin-left:100px; }
+	</style>
+	
+	<script>
+	
+	function validate(){
+	
+			 if(document.getElementById("firstname").value == ""){
+			           window.alert("Enter a first name");
+					   document.getElementById("firstname").focus();
+					   return false;
+			 }
+			 
+			 if(document.getElementById("lastname").value == ""){
+			           window.alert("Enter a last name");
+					   document.getElementById("lastname").focus();
+					   return false;
+			 }
+			 
+			 if(document.getElementById("satisfaction").value == ""){
+			           window.alert("Enter a satisfaction level");
+					   document.getElementById("satisfaction").focus();
+					   return false;
+			 }
+			 
+			 if(document.getElementById("review").value == ""){
+			           window.alert("Enter a review");
+					   document.getElementById("review").focus();
+					   return false;
+			 }
+			 
+			 var response = confirm("Click OK to confirm your submission");
+			 
+			 if(response){
+						 window.open("reviewThankYou.html", "", "width=200, height=200", top);
+						 }
+			 
+			 return response;
+	
+	}
+	
+	</script>
+	
+  </head>
+  <body>
+  
+  <header>
+  <h1><a href="index.html">Vonglis Enterprises, LLC</a></h1>
+  
+  <ul>
+  	  <li><a href="index.html">Home</a></li>
+	  <li><a href="services.html">Services</a></li>
+	  <li><a href="about_contact.html">About/Contact</a></li>
+	  <li><a href="gallery.html">Gallery</a></li>
+	  <li><a href="review.html">Reviews</a></li>
+  </ul>
+  
+  </header>
+
+  <div id="pageWrap">
+  <div id="content">
+  <h2>Review Form</h2>
+  
+  <form name="VonglisEnterprisesReview" id="VonglisEnterprisesReview" action="http://www.formbuddy.com/cgi-bin/form.pl" method="post" onsubmit="return validate();">
+  <input type="hidden" name="username" value="ryasto16"> 
+  <input type="hidden" name="reqd" value="0"> 
+  <input type="hidden" name="url" value="http://studentweb.monroecc.edu/students/rstonegraber1/SP_CIS201SL1/project/review_form.html">
+  <input type="hidden" name="formsubject" value="Vonglis Enterprises, LLC Customer Review">
+  
+  <fieldset>
+  <legend>Personal information</legend>
+  <label for="firstname">First Name:</label><input type="text" name="firstname" id="firstname"><br>
+  <label for="lastname">Last Name:</label><input type="text" name="lastname" id="lastname"><br>
+  
+  <br>
+  
+  <!-- label cannot be "for" two different things(?)-->
+  <label>Gender:</label>
+  <input type="radio" name="gender" id="male" value="male">
+  <label for="male">Male</label><br>
+  <input type="radio" name="gender" id="female" value="female">
+  <label for="female">Female</label><br>
+  </fieldset>
+  
+  <br>
+  
+  
+  
+  <label for="satisfaction">Satisfaction(1-5):</label>
+  <input type="number" name="satisfaction" id="satisfaction" min="1" max="5">
+  
+  <br>
+  <br>
+  
+  <label for="numOfServices">How many times have you recieved services:</label>
+  <input type="number" name="numOfServices" id="numOfServices" min="1" max="999"><br>
+  
+  <br>
+  
+  <label for="workType">Type of work:</label><br>
+  <input type="checkbox" name="workType" id="workType" value="Drainage">Drainage<br>
+  <input type="checkbox" name="workType" id="install" value="Line/pipe installation">Line/pipe installation<br>
+  <input type="checkbox" name="workType" id="ditch" value="Ditchwork">Ditchwork<br>
+  <input type="checkbox" name="workType" id="pond" value="Pond excavation">Pond excavation<br>
+  <input type="checkbox" name="workType" id="siteWork" value="Site work">Site work<br>
+  <input type="checkbox" name="workType" id="other" value="Other">Other<br>
+  
+  <br>
+  
+  <label for="date_of_service">Date of services:</label>
+  <input type="date" name="date_of_service" id="date_of_service"><br>
+  
+  <br>
+  
+  <label for="review">Review:</label><br>
+  <textarea name="review" id="review" rows="10" cols="70"></textarea><br>
+  
+  <br>
+  
+  <input type="submit" value="Submit">
+  <input type="reset" value="Reset">
+  
+  </form>
+  
+  </div>
+  </div>
+  
+  <footer>
+  
+  <ul>
+  	  <li>&#9899;<a href="index.html">Home</a>&#9899;</li>
+	  <li><a href="services.html">Services</a>&#9899;</li>
+	  <li><a href="about_contact.html">About/Contact&#9899;</a></li>
+	  <li><a href="gallery.html">Gallery</a>&#9899;</li>
+	  <li><a href="review.html">Reviews</a>&#9899;</li>
+  </ul>
+  
+  <img src="media/logo.jpg" alt="logo" width="200" height="121"><br>
+  
+  <script type="text/javascript">
+document.write("This page was last modified by Ryan Stonegraber: " +
+document.lastModified);
+</script>
+  
+  </footer>
+  
+  </body>
+</html>

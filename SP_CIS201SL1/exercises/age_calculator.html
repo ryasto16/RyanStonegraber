@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript Events</title>
+	<style>
+	form{
+		 width:500px;
+		 background-color:#d63333;
+		 margin-left:auto; 
+		 margin-right:auto;
+		 margin-top:20px;
+		 padding:10px;
+		 }
+		 
+	fieldset{
+			 background-color:#efbdbd;
+			 border-radius:25px; }
+			 
+	legend{
+		   background-color:#bdefc0;
+		   border-radius:25px;
+		   padding:5px; }
+		   
+	label{
+		  display:inline-block;
+		  margin:5px; }
+		  
+	input{
+		  display:inline-block;
+		  margin:5px;
+		  
+		   }
+		  
+	footer{
+		   width:500px;
+		   margin-left:auto; 
+		   margin-right:auto;
+		    }
+	</style>
+	
+	<script>
+	function calculate(){
+			 var fname = document.getElementById("firstname").value;
+			 var lname = document.getElementById("lastname").value;
+			 var year = Number(document.getElementById("birth").value);
+			 window.alert(fname + " " + lname + ", " + "this year you turn " + (2018-year) + " years old!")
+	}
+	</script>
+  </head>
+  
+  <body onload="firstname.focus();">
+  <form>
+  <fieldset>
+  <legend>Legend</legend>
+  <label for="firstname">First Name: </label><input type="text" name="firstname" id="firstname"><br>
+  <label for="lastname">Last Name: </label><input type="text" name="lastname" id="lastname"><br>
+  <label for="birth">Year of Birth: </label><input type="text" name="birth" id="birth"><br>
+  <input type="button" value="Calculate Age" onclick="calculate()">
+  </fieldset>
+  </form>
+  <footer>
+  <br>
+  <a href="../index.htm">Homepage</a><br>
+  <script type="text/javascript">
+  document.write("This page was last modified by Ryan Stonegraber: ");
+  document.write(document.lastModified);
+  </script>
+  </footer>
+  </body>
+</html>

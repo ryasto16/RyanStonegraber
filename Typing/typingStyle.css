@@ -1,17 +1,24 @@
 #main{
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    border: 1px solid black;
-    padding: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 95%;
 }
 
-h1{
-    width: 15%;
+body{
+    font-family: "Helvetica Neue",Arial,sans-serif;
+    background-color: #fff2dd;
+}
+
+#title{
+    width: 50%;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+    font-size: 40px;
     font-family: sans-serif, serif;
+    color: #827b71;
 }
 
 hr{

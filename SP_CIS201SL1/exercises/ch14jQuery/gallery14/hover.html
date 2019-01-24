@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Image Gallery</title>
+    
+    <!--[if IE]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+	
+	<style>
+	body{
+		 background-color:#333333;
+		 color:#eaeaea; }
+	#gallery{
+			 width:800px; 
+			 }
+	#gallery ul{
+			 	width:300px;
+			 	list-style-type:none;
+				float:left;
+			  }
+			  
+	#gallery li{
+    			 display:inline; 
+    			 float:left;
+    			 padding:16px;
+			 }
+			 
+	#gallery img{
+			 	 border:none; 
+				 }
+				 
+	figure{
+		   padding-top:30px;
+		   text-align:center; }
+		   
+	figcaption{
+			   font-weight:bold; 
+			   font-size:1.5em;}
+	</style>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	
+	<script>
+	$(document).ready(function(){
+	  $('#gallery a').hover(function(){
+	  
+	  var galleryHref = $(this).attr('href');
+	  var galleryAlt = $(this).attr('title');
+	  
+	  $('figure img').attr({src: galleryHref, alt: galleryAlt});
+	  
+	  $('figcaption').html(galleryAlt);
+	  });
+	});
+	</script>
+  </head>
+  
+  <body>
+  
+  <h1>Image Gallery</h1>
+  
+  <div id="gallery">
+
+  <ul>
+  	  <li><a href="../../gallery11/Field.jpg" title="Field"><img src="../../gallery11/FieldThb.jpg" width="100"
+	   height="67" alt="Field Thumbnail"></a>
+	   </li>
+	   
+	   <li><a href="../../gallery11/candles.jpg" title="Candles"><img src="../../gallery11/candlesThb.jpg" width="75"
+	   height="102" alt="Candle Thumbnail"></a>
+	   </li>
+	   
+	   <li><a href="../../gallery11/frog.jpg" title="Frog"><img src="../../gallery11/frogThb.jpg" width="100"
+	   height="67" alt="From Thumbnail"></a>
+	   </li>
+	   
+	   <li><a href="../../gallery11/mountains.jpg" title="Mountains"><img src="../../gallery11/mountainsThb.jpg" width="100"
+	   height="75" alt="Mountain Thumbnail"></a>
+	   </li>
+  </ul>
+  
+    <figure>
+  		  <img src="../../gallery11/Field.jpg" alt="Field placeholder image">
+  </figure>
+  
+  </div>
+  
+  </body>
+</html>

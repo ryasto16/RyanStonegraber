@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript Events</title>
+
+	<style>
+	form {width:500px;
+		 margin-left:auto; 
+		 margin-right:auto;
+		 border:1px solid black;
+		 padding: 10px;
+		 background-color:#a3ffdb;
+		 box-shadow: 10px 10px grey;}
+		 
+	label{
+		  margin:5px;
+		  position:absolute; }
+	input{
+		  margin-left:200px;
+		  margin-bottom:5px; }
+		  
+	footer {
+		  width:500px;
+		  margin-left:auto; 
+		  margin-right:auto; }
+	</style>
+	<script>
+	function Calculate(){
+	
+			 var priceVar = Number(document.getElementById("price").value);
+           	 var discountVar = Number(document.getElementById("discount").value);
+			 var finalPrice;
+           	
+           	 if(priceVar<0){
+           	 window.alert("Enter a valid price");
+			 document.getElementById("price").focus();
+			 } else {
+			   if (discountVar>=0 && discountVar<=100){
+			   	  discountVar = discountVar/100
+				  finalPrice = priceVar-(priceVar*discountVar)
+				  document.getElementById("after").value = ("$" + finalPrice.toFixed(2));
+			   	  } else{
+				  	window.alert("Enter a valid % discount");
+					document.getElementById("discount").focus();
+			   		}
+			   }
+	
+	}
+	
+	function ClearFocus(){
+	
+	document.getElementById("price").value = "";
+	document.getElementById("discount").value = "";
+	document.getElementById("after").value = "";
+	document.getElementById("price").focus();
+	
+	}
+	</script>
+  </head>
+  <body onload="price.focus()">
+
+  <form>
+  <fieldset>
+  <legend>Discount Calculator</legend>
+  <label for="price">Enter Price: </label><input type="text" name="price" id="price"><br>
+  <label for="discount">Enter Discount as a %: </label><input type="text" name="discount" id="discount"><br>
+  <label for="after">Price after discount: </label><input type="text" name="after" id="after" disabled="disabled"><br>
+  <input type="button" value="Calculate Discounted Price" onclick="Calculate()"><br>
+  <input type="button" value="Clear and focus" onclick="ClearFocus()">
+  </fieldset>
+  </form>
+  
+  <footer>
+  <br><a href="../index.htm">Homepage</a><br>
+  <script type="text/javascript">
+  document.write("This page was last modified by Ryan Stonegraber: ");
+  document.write(document.lastModified);
+  </script>
+  </footer>
+  
+  </body>
+</html>

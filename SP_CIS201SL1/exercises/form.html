@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Feedback Form</title>
+	<style>
+	*{
+	  padding:5px;
+	  margin:5px;
+	   }
+	   
+	fieldset{
+			 width:300px;
+			 padding:10px; }
+			 
+	form{
+		 margin-left:auto; 
+		 margin-right:auto;
+		 width:500px;
+		 border:3px dashed black;
+		 padding:50px;
+		 background-color:#dbd485}
+		 
+	label{
+		  font-family:Courier; }
+		  
+	hr{padding:0px; }
+	
+	h1{
+	   font-family:Trebuchet MS; }
+	   
+	body{
+		 background-color:#636363; }
+		 
+	footer{
+		   width:500px;
+		   margin-left:auto; 
+		   margin-right:auto;
+		    }
+	</style>
+  </head>
+  
+  <body>
+  
+  <form action="http://www.formbuddy.com/cgi-bin/form.pl" method="post">
+  <input type="hidden" name="username" value="ryasto16"> 
+  <input type="hidden" name="reqd" value="0"> 
+  <input type="hidden" name="url" value="http://studentweb.monroecc.edu/students/rstonegraber1/SP_CIS201SL1/exercises/formConfirmation.html">
+  <input type="hidden" name="formsubject" value="CIS201 Form submission">
+  
+  <h1>Feedback</h1>
+  <hr>
+  
+  <fieldset>
+  <legend>Personal information</legend>
+  <label for="firstname">First Name:</label><input type="text" name="firstname" id="firstname"><br>
+  <label for="lastname">Last Name:</label><input type="text" name="lastname" id="lastname"><br>
+  
+  <br>
+  
+  <!-- label cannot be "for" two different things(?)-->
+  <label>Gender:</label><br>
+  <input type="radio" name="gender" id="male" value="male">
+  <label for="male">Male</label><br>
+  <input type="radio" name="gender" id="female" value="female">
+  <label for="female">Female</label><br>
+  </fieldset>
+  
+  <br>
+  
+  <label for="county">County:</label>
+  <input  type="text" name="county" id="county" list="dataListCounty">
+  <datalist id="dataListCounty">
+  			<option>Livingston</option>
+			<option>Monroe</option>
+			<option>Ontario</option>
+			<option>Wayne</option>
+			<option>Genesee</option>
+			<option>Wyoming</option>
+			<option>Orleans</option>
+			<option>Niagra</option>
+			<option>Erie</option>
+			<option>Allegany</option>
+			<option>Stuben</option>
+  </datalist><br>
+  
+  <br>
+  
+  <label for="satisfaction">Satisfaction</label><br>
+  Low<input type="range" name="satisfaction" id="satisfaction" min="1" max="5">High<br>
+  
+  <br>
+  
+  <label for="numServices">How many times have you recieved services:</label>
+  <input type="number" name="numServices" id="numServices" min="1" max="999"><br>
+  
+  <br>
+  
+  <label for="workType">Type of work:</label><br>
+  <input type="checkbox" name="workType" id="workType" value="Drainage">Drainage<br>
+  <input type="checkbox" name="workType" id="install" value="Line/pipe installation">Line/pipe installation<br>
+  <input type="checkbox" name="workType" id="ditch" value="Ditchwork">Ditchwork<br>
+  <input type="checkbox" name="workType" id="pond" value="Pond excavation">Pond excavation<br>
+  <input type="checkbox" name="workType" id="siteWork" value="Site work">Site work<br>
+  <input type="checkbox" name="workType" id="other" value="Other">Other<br>
+  
+  <br>
+  
+  <label for="calendar">Date of services:</label>
+  <input type="date" name="calendar" id="calendar"><br>
+  
+  <br>
+  
+  <label for="feedback">Feedback:</label><br>
+  <textarea name="feedback" id="feedback" rows="10" cols="40"></textarea><br>
+  
+  <br>
+  
+  <input type="submit" value="Submit">
+  <input type="reset" value="Reset">
+  
+  </form>
+  
+  <footer>
+  <a href="../index.htm">Homepage</a><br>
+  <script type="text/javascript">
+  document.write("This page was last modified by Ryan Stonegraber: ");
+  document.write(document.lastModified);
+  </script>
+  </footer>
+  </body>
+</html>

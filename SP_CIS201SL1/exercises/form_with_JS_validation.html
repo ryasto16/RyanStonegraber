@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <title>Garden Center</title>
+	
+	<style>
+	
+	#pageWrap{
+			  border:1px solid black;
+			  width:900px;
+			  height:auto;
+			  margin-left:auto; 
+			  margin-right:auto;
+			  background-image:url('../media/garden.jpg');
+			  background-repeat:repeat-y;
+			  background-size: 100%;
+			  padding:10px;
+			  }
+			  
+	#pageWrap header {
+	   background-color:#f7dfc0;
+	   text-align:center;
+	   width:700px;
+	   margin-left:auto; 
+	   margin-right:auto;
+	   padding:10px;
+	   font-family: Georgia;
+	   border-radius: 10px;}
+	   
+	 hr{width:60%; }
+	   
+	 form{
+	 	  width:700px;
+		  margin-left:auto; 
+	   	  margin-right:auto;
+		  background-color:#ffc4f8;
+		  padding:10px;
+		  margin-top:5px;;
+		  border-radius: 10px; }
+		 
+	 .flower{
+			 height:100px;;
+			 margin:5px;
+			 margin-bottom:10px;
+			  }
+			 
+	.flower img{
+				float:left;
+				margin-right: 10px; }
+				
+	.flower h3{
+			   margin-bottom:0px;
+			   margin-top: 5px; }
+				
+	.flower input{
+				  width:30px; }
+				  
+	#contact {
+			  margin-bottom:10px;}
+				  
+	#contact label{
+			 	   position:absolute;
+				    }
+				   
+	#contact input{
+			 	   margin-left:100px;
+				   margin-bottom:5px; }
+				   
+	#delivery{
+			   }
+			  
+	#delReq{
+			float:left;
+			width:300px; }
+				   
+	#delInst{
+			 float:right;
+			 margin-top:10px;
+			  }
+			  
+	#buttons{
+			 width:300px;
+			 float:right;
+			 margin-top:10px; 
+			 }
+			 
+	#buttons input{
+			 	   width:100px;
+				   padding:10px;
+				   margin-left:5px;}
+				   
+	footer{
+		   width:700px;
+		   margin-left:auto; 
+	   	   margin-right:auto;
+		   text-align:center;
+		   background-color:#f7dfc0;
+		   margin-top:5px;
+		   border-radius: 10px; }
+	
+	
+	</style>
+
+	<script>
+	
+	function CalcOrderTotal(){
+	
+			 var primrose = Number(document.getElementById("primNum").value);
+			 if (primrose<0 || primrose>25 ){
+			 	
+				window.alert("Enter a valid number of Primrose");
+				document.getElementById("primNum").focus();
+				return false;}
+				
+			var grevy = Number(document.getElementById("grevyNum").value);
+			 if (grevy<0 || grevy>25 ){
+			 	
+				window.alert("Enter a valid number of Grevy");
+				document.getElementById("grevyNum").focus();
+				return false;}
+				
+			var pershing = Number(document.getElementById("pershingNum").value);
+			 if (pershing<0 || pershing>25 ){
+			 	
+				window.alert("Enter a valid number of Pershing");
+				document.getElementById("pershingNum").focus();
+				return false;}
+				
+			var total = (primrose * 12.89) + (grevy * 14.95) + (pershing * 19.75);
+			var response = confirm("The order total is: " + "$" + total.toFixed(2) + "\nClick OK to place order");
+				
+			if(response){
+						 window.open("thankYouConfirm.html", "", "width=200, height=200");
+			}
+			
+			return response;
+	
+	}
+	
+	function InValidate(){
+	
+			 if(document.getElementById("fName").value == ""){
+			           window.alert("Enter a first name");
+					   document.getElementById("fName").focus();
+					   return false;
+			 }
+			 
+			 if(document.getElementById("lName").value == ""){
+			           window.alert("Enter a last name");
+					   document.getElementById("lName").focus();
+					   return false;
+			 }
+			 
+			 if(document.getElementById("email").value == ""){
+			           window.alert("Enter an email address");
+					   document.getElementById("email").focus();
+					   return false;
+			 }
+			 
+			 return CalcOrderTotal();
+	
+	}
+	
+	</script>
+	
+  </head>
+  
+  <body>
+
+  <div id="pageWrap">
+  
+  <header>
+  <h1>Ryan's Garden Center</h1>
+  <hr>
+  <h4>1000 East Henrietta Road, Rochester, NY 14623 ~ 585.292.2000<br>
+  Open Mon-Fri, 9:00am-4:00pm</h4>
+  </header>
+  
+  <form name="orderForm" id="orderForm" action="http://www.formbuddy.com/cgi-bin/form.pl" method="post" onsubmit="return InValidate();">
+  <input type="hidden" name="username" value="ryasto16"> 
+  <input type="hidden" name="reqd" value="0"> 
+  <input type="hidden" name="url" value="http://studentweb.monroecc.edu/students/rstonegraber1/SP_CIS201SL1/exercises/form_with_JS_validation.html">
+  <input type="hidden" name="formsubject" value="Garden Center">
+  
+  
+  <fieldset>
+  <legend>Lilac Order Form</legend>
+  
+  <div class="flower">
+  <img src="../media/Lilac_Primrose.jpg" alt="Lilac Primrose">
+  <h3>Lilac - Primrose</h3>
+  Exceptionally fragrant blooms are superb for cutting. The perfume will fill your whole house!
+  $12.89 each<br>
+  <label for="primNum">Number of plants ordered:</label><input type="text" name="primNum" id="primNum" >
+  <br>
+  For orders over 20, call to reveive quantity Discount and shipping prices.
+  </div>
+  
+  <div class="flower">
+  <img src="../media/Lilac_Grevy.jpg" alt="Lilac President Grevy Hybrid">
+  <h3>Lilac - President Grevy Hybrid</h3>
+  Hybrid Vigor produces bigger, better blossoms - and more of them.
+  $14.95 each<br>
+  <label for="grevyNum">Number of plants ordered:</label><input type="text" name="grevyNum" id="grevyNum" >
+  <br>
+  For orders over 20, call to reveive quantity Discount and shipping prices.
+  </div>
+  
+  <div class="flower">
+  <img src="../media/Lilac_Pershing.jpg" alt="Lilac General Pershing Hybrid">
+  <h3>Lilac - General Pershing Hybrid</h3>
+  Thick, sweet-scented clusters are superb for cutting! Impressive selection of species and colors
+  all 8-12feet tall.
+  $19.75 each<br>
+  <label for="pershingNum">Number of plants ordered:</label><input type="text" name="pershingNum" id="pershingNum" >
+  <br>
+  For orders over 20, call to reveive quantity Discount and shipping prices.
+  </div>
+  
+  <hr>
+  
+  <div id="contact">
+  <fieldset>
+  <legend>Contact Information</legend>
+  <label for="fName">First Name:</label><input type="text" name="fName" id="fName" ><br>
+  <label for="lName">Last Name:</label><input type="text" name="lName" id="lName" ><br>
+  <label for="email">Email:</label><input type="text" name="email" id="email" ><br>
+  <label for="phone">Phone:</label><input type="text" name="phone" id="phone" >
+  </fieldset>
+  </div>
+  
+  
+  <fieldset>
+  <legend>Delivery Information</legend>
+  
+  
+  <div id="delReq">
+  <label for="deliveryDate">Requested Delivery Date:</label><input type="text" name="deliveryDate" id="deliveryDate" >
+  <br>
+  If no one is home to receive plants, where would you like them left?<br>
+  Check all that apply:<br>
+  <input type="checkbox" name="location" id="front" value="frontPorch">Leave on front porch<br>
+  <input type="checkbox" name="location" id="back" value="backDoor">Leave at back door<br>
+  <input type="checkbox" name="location" id="garage" value="inGarage">Leave in garage<br>
+  <input type="checkbox" name="location" id="notOutside" value="doNotLeaveOutside">Do not leave outside
+  </div>
+  
+  <div id="delInst">
+  <label for="deliveryInstruction">Special Delivery Instructions:</label><br>
+  <textarea name="deliveryInstruction" id="deliveryInstruction" rows="10" cols="20"></textarea>
+  </div>
+  </fieldset>
+  
+  <div id="buttons">
+  <input type="reset" value="CLEAR">
+  <input type="submit" value="SUBMIT">
+  </div>
+  
+  </fieldset>
+  
+  </form>
+  
+  <footer>
+  <a href="../index.htm">Homepage</a><br>
+  <script type="text/javascript">
+  document.write("This page was last modified by Ryan Stonegraber: ");
+  document.write(document.lastModified);
+  </script>
+  </footer>
+  
+  </div>
+  
+  </body>
+</html>

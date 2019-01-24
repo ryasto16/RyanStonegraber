@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Form</title>
+	
+	<style>
+	.error{
+		   font-family:Arial,sans-serif;
+		   font-style:italic;
+		   font-size:.90em;
+		   color:#FF0000;
+		   margin-left:1em;}
+	</style>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.0/jquery.validate.js"></script>
+	
+	<script>
+	$(document).ready(function(){
+	$('form').validate();
+	});
+	</script>
+  </head>
+  <body>
+  <h1>Newsletter Sign Up</h1>
+  <form>
+  Name:<input type="text" name="name" id="name" class="required"><br>
+  Email:<input type="text" name="email" id="email" class="required email"><br>
+  <input type="submit" value="SUBMIT">
+  </form>
+
+  </body>
+</html>

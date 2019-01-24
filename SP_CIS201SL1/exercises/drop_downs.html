@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <title>Drop Down Menus Example</title>
+    <meta charset="utf-8">
+	
+	<style type="text/css">
+	*{padding:0px; margin:0px; }
+	body{font-family:Arial; font-size:24px; }
+	header{height:50px; border:1px solid #ff0000; }
+	#pageWrap{width:700px; border:1px solid #000000; margin:20px auto 0px auto; }
+	
+	/*drop down menu styling starts here:
+	/*Navigation menus are basically just lists. We can use lists nested within lists to create any number of 
+	submenus*/
+	
+	/*common styles for all hyperlinks in the nav section*/
+	nav a:link {text-decoration:none; color:#000000;}
+	nav a:hover {font-weight:bold;}
+	
+	/*common styles for ALL list items (all levels) within the nav element - 
+	can be overridden by more specific styles*/
+	
+	nav ul li { float:left;
+		   	  	position:relative;	   /*this causes the drop down menu to display in front of the content
+									   section so that the menu items can be seen and clicked*/
+									   
+				width:170px; /*use a specific width to make each menu item the same width*/
+                background-color:#ffcc33; /*orange background color*/
+                font-size:16px;
+                text-align:center; /*main menu list items will be center-aligned*/
+                border-right:1px solid #ffffff;
+                height:30px;
+                line-height:30px;
+                list-style-type:none;}
+	
+	/*common style for a hover over any list item in the nav section*/
+	nav li:hover {background-color:#ffffcc;} /*change background color to light yellow when mouse hovers*/
+	
+	/*common styles for ALL SUBMENU list items*/
+	nav ul li ul li{text-align:left; /*text will be left-aligned in the submenus*/
+    	   	  	    padding-left:5px; /*padding to move the text off the border*/
+    				}
+					
+	/*more specific styles for 1st level submenu (ul nested inside a li)*/
+	nav ul li ul {visibility:hidden;} /*1st level submenu will not be visible, yet...*/
+	
+	/*more specific styles for the 2nd level submenu*/
+	nav ul li ul li ul {margin-left:170px; /*offset the 2nd level submenu to the left by the width of the 1st level
+	submenu items (relative positioning)*/
+	
+				        margin-top:-30px; } /*offset the 2nd level submenu from the top by the height of the 1st
+	level submenu items so that they align with top of 1st level menu item (relative positioning)*/
+	
+	/*more specific styles: use pseudo classes to make the submenus visible when appropriate*/
+    nav ul li:hover ul {visibility:visible;} /*1st level submenu visible when the user hovers over one of the main menu
+    list items*/
+    nav ul li:hover ul li ul {visibility:hidden;} /*keep level 2 submenu not visible when the user is hovering over the
+    first submenu*/
+    nav ul li ul li:hover ul {visibility:visible;} /*make the 2nd level submenu visible only when the user hovers over the
+    1st level submenu*/
+	
+	.content {clear:left; /*clear the floats so that the content div displays below the nav menus*/
+     margin-top:50px;
+     height:300px;
+     }
+	
+	</style>
+	</head>
+  
+    <body>
+  	<div id="pageWrap">
+	<header>This is the header section</header>
+	
+	<!--drop down navigation menus-->
+	<nav>
+    <!--top-level main menu-->
+    <ul>
+		<!--1st item in main menu (does not include any submenus-->
+ 		<li><a href="#">Services</a>
+		
+  		<!--1st level submenu with 3 items: this is an unordered list fully nested within the list item-->
+         <ul>
+         <li><a href="#">Weddings</a></li>
+         <li><a href="#">Graduations</a></li>
+         <li><a href="#">Horse Shows</a></li>
+         </ul><!--close submenu list-->
+	   </li><!--and then close main nav list item 2-->
+	   
+	   <!--3rd item in main menu (has 2 levels of submenus)-->
+    <li>
+    <a href="#">Photo Galleries</a>
+    <!--1st level submenu with 4 items, some of the list items have additional 2nd level submenus-->
+    <ul>
+    <!--sub list item 1-->
+    <li><a href="#">McMazz Wedding</a>
+   	</li><!--close sub list item 1-->
+   
+   <!--sub list item 2-->
+    <li><a href="#">CHA Horse Shows</a>
+    <!--2nd level sub-submenu with 4 items-->
+    <ul>
+       <li><a href="#">Western June 15</a></li>
+       <li><a href="#">English June 15</a></li>
+       <li><a href="#">English July 1</a></li>
+       <li><a href="#">Western July 28</a></li>
+       <li><a href="#">Dressage August 17</a></li>
+    </ul>
+    </li><!--close sub list item 2-->
+	
+   <!--sub list item 3-->
+   <li><a href="#">Mary's Graduation</a>
+    <!--2nd level sub-submenu with 2 items-->
+   <ul>
+    <li><a href="#">Ceremony</a></li>
+    <li><a href="#">Party</a></li>
+   </ul>
+   </li><!--close sub list item 3-->
+    </ul><!--close 1st level sub menu-->
+    </li> <!--close main nav list item 3-->
+	
+	<!--4th item in main menu (no submenus)-->
+   <li>
+   	 <a href="#">Contact</a>
+   </li><!--close main nav list item 4-->
+  
+    </ul><!--close main nav list-->
+    </nav>
+	
+    <div class="content">This is the content section.</div>
+    </div> <!--close pageWrap-->
+	<script type="text/javascript">
+    document.write("This page was last modified by Ryan Stonegraber: ");
+    document.write(document.lastModified);
+    </script>
+	<br>
+	<a href="../index.htm">Homepage</a>
+    </body>
+    
+  </html>

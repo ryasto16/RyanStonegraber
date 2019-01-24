@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Table</title>
+	<style>
+	table{background-color:black; box-shadow:7px 5px; margin:auto;}
+	#name{background-color:#fc9191; }
+	td[headers="name"]{color:#300000; background-color:#fc9191;; padding:5px; }
+	#density{background-color:#ffbe6a; }
+	td[headers="density"]{color:#301a00; background-color:#ffbe6a; }
+	#height{background-color:#fffbaf; }
+	td[headers="height"]{color:#444100; background-color:#fffbaf; }
+	td[headers="name"]{background-color:#fc9191; }
+	th{padding:10px; font-family:"Arial"; font-size:20px;}
+	td{text-align:center; font-size:25px; }
+	body{background-color:grey; }
+	caption{font-family:"Georgia"; font-size:50px; text-shadow:2px 2px 10px; }
+	footer{margin-left:auto; margin-right:auto;width:600px; text-align:center; }
+	</style>
+  </head>
+  
+  <body>
+  
+  <table>
+  <caption>Trees in NY</caption>
+  
+     <thead>
+	 		<tr>
+				<th id="name" colspan="2">Name</th>
+				<th id="density">Density(lb/ft^3)</th>
+				<th id="height">Average Height(ft)(min/max)</th>
+			</tr>
+	 </thead>
+	 
+	 <tbody>
+	 		<tr>
+				<td headers="name" rowspan="2">1.</td>
+				<td headers="name" rowspan="2">Sugar Maple</td>
+				<td headers="density" rowspan="2">59</td>
+				<td headers="height">82</td>
+			</tr>
+			<tr>
+				<td headers="height">115</td>
+			</tr>
+			<tr>
+				<td headers="name" rowspan="2">2.</td>
+				<td headers="name" rowspan="2">Black Cherry</td>
+				<td headers="density" rowspan="2">45</td>
+				<td headers="height">50</td>
+			</tr>
+			<tr>
+				<td headers="height">100</td>
+			</tr>
+			<tr>
+				<td headers="name" rowspan="2">3.</td>
+				<td headers="name" rowspan="2">Red Oak</td>
+				<td headers="density" rowspan="2">45</td>
+				<td headers="height">60</td>
+			</tr>
+			<tr>
+				 <td headers="height">70</td>
+			</tr>
+			<tr>
+				<td headers="name" rowspan="2">4.</td>
+				<td headers="name" rowspan="2">Eastern White Pine</td>
+				<td headers="density" rowspan="2">26</td>
+				<td headers="height">65</td>
+			</tr>
+			<tr>
+				 <td headers="height">100</td>
+			</tr>
+			<tr>
+				<td headers="name" rowspan="2">5.</td>
+				<td headers="name" rowspan="2">American Sycamore</td>
+				<td headers="density" rowspan="2">33</td>
+				<td headers="height">75</td>
+			</tr>
+			<tr>
+				 <td headers="height">120</td>
+			</tr>
+	 </tbody>
+  </table>
+  <br>
+  <footer>
+  <script type="text/javascript">
+document.write("This page was last modified by Ryan Stonegraber: " +
+document.lastModified);
+</script>
+<br>
+<a href="../index.htm">Homepage</a>
+</footer>
+
+  </body>
+</html>

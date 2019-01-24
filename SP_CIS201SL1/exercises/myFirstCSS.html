@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!-- saved from url=(0114)https://mcc.open.suny.edu/bbcswebdav/pid-1898872-dt-content-rid-5734314_1/courses/201820-MON-26291/myFirstCSS.html -->
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Ryan Stonegraber - First Look at CSS</title>
+
+<style>
+body {font-family:sans-serif;font-size: 1.25em;background-color:#D4F2F2;}
+p {text-indent:20px; }
+h1 {font-size:200%; line-height:250%; color:#610000;background-color:#819DDE }
+h2 {font-size:125%; line-height:175%; color:#08173E; background-color:#8BDCBC; width:30% }
+</style>
+
+</head>
+<body>
+<h1 style="text-align:center" >A First Look at CSS</h1>
+<p>Cascading Style Sheets (CSS) are designed primarily to separate document content (html code) from document presentation (styles). There are advantages to using CSS. At first you may find it confusing, but once you understand the rules of the cascade, you will appreciate the beauty of using CSS.</p>
+<p>You should strive to use external or embedded style sheets as much as possible.  Find the commonalities between formats and set the styles at the external or embedded level. Keep inline styles to a minimum. Inline styles should be the "exception", not the "rule".</p>
+
+<h2>Advantages of CSS</h2> 
+<ul style="list-style-type:square;">
+<li>greater control</li>
+<li>separates style from structure</li>
+<li>reduce repetition of html code</li>
+<li>easier site maintenance</li>
+<li>improved accessibility</li>
+</ul>
+
+<h2>Rules of "Cascading"</h2>
+<p style="text-indent:0px">Generally speaking, styles "cascade" into a new virtual style sheet by the following rules, where #4 has the highest priority:</p>
+<ol>
+<li>browser default</li>
+<li style="font-size:110%">external style sheet</li>
+<li style="font-size:130%">embedded styles (inside head)</li>
+<li style="font-size:150%">inline styles (inside individual tags)</li>
+</ol>
+
+<a href="../index.htm">Homepage</a> <br><br>
+
+<script type="text/javascript">
+document.write("This page was last modified by Ryan Stonegraber: ");
+document.write(document.lastModified);
+</script>
+
+
+</body>
+</html>

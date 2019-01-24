@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Image Gallery</title>
+    
+    <!--[if IE]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+	
+	<style>
+	body{
+		 background-color:#333333;
+		 color:#eaeaea; }
+	#gallery{
+			 position:relative; 
+			 }
+	figure{
+		   position:absolute; 
+		   left:280px;
+		   text-align:center;
+		   opacity:.25;
+		   }
+	#gallery ul{
+			 width:300px;
+			 list-style-type:none;
+			  }
+	#gallery li{
+			 display:inline; 
+			 float:left;
+			 padding:10px;
+			 }
+	#gallery img{
+			 	 border:none; 
+				 }
+	#gallery a{
+			   text-decoration:none;
+			   color:#eaeaea;
+			   font-style:italic;
+			   }
+	#gallery span{
+			 	  position:absolute; 
+				  left:-1000px;
+				  opacity:0;
+				  transition: opacity 3s ease-in-out;
+				  }
+	#gallery a:hover span{
+			 		 	  position:absolute; 
+						  top:16px;
+						  left:320px;
+						  text-align:center;
+						  opacity:1;}
+	</style>
+  </head>
+  
+  <body>
+  
+  <h1>Image Gallery</h1>
+  
+  <div id="gallery">
+  <figure>
+  		  <img src="Field.jpg" alt="Field placeholder image">
+  </figure>
+  <ul>
+  	  <li><a href="Field.jpg"><img src="FieldThb.jpg" width="100"
+	   height="67" alt="Field Thumbnail">
+	   <span><img src="Field.jpg" width="800" height="534" alt="Field"><br>Field</span></a>
+	   </li>
+	   <li><a href="candles.jpg"><img src="candlesThb.jpg" width="75"
+	   height="102" alt="Candle Thumbnail">
+	   <span><img src="candles.jpg" width="400" height="544" alt="Candles"><br>Candles</span></a>
+	   </li>
+	   <li><a href="frog.jpg"><img src="frogThb.jpg" width="100"
+	   height="67" alt="From Thumbnail">
+	   <span><img src="frog.jpg" width="800" height="533" alt="Frog"><br>Frog</span></a>
+	   </li>
+	   <li><a href="mountains.jpg"><img src="mountainsThb.jpg" width="100"
+	   height="75" alt="Mountain Thumbnail">
+	   <span><img src="mountains.jpg" width="800" height="600" alt="Mountains"><br>Mountains</span></a>
+	   </li>
+  </ul>
+  <footer style="position:absolute; top:600px;">
+  <a href="../../index.htm">Homepage</a><br>
+  <script type="text/javascript">
+document.write("This page was last modified by Ryan Stonegraber: " +
+document.lastModified);
+</script>
+</footer>
+  </div>
+  
+  </body>
+</html>

@@ -1,30 +1,32 @@
 
-var lengthOfText = 85 //# of characters(85 default)
+var lengthOfText = 85 //# of characters(85 default)(should be multiple of 5)
 var randomStringArray
 
 resetPage();
+console.log("Random String:");
+console.log(randomStringArray);
 
 var userStringArray = [];
 var started = false;
 var startTime;
 
-//key press
+// this happens everytime a key is pressed
 function checkWord(event){
 
-    if(started == false){
+    if(started == false){ //used for timing. clock starts the first time a key is pressed after resetPage()
         started = true;
         startTime = performance.now();
     }
 
-    if(userStringArray.length  <=  randomStringArray.length+1){
+    userStringArray = (document.getElementById("inputText").value).split(" "); //saves what user has typed to array
+    console.log(userStringArray);
 
-        userStringArray = (document.getElementById("inputText").value).split(" ");
-        console.log(userStringArray);
-    }
-
-    if(userStringArray.length  >=  randomStringArray.length+1){//end of typing
+    if(userStringArray.length  >=  randomStringArray.length && (userStringArray[userStringArray.length -1]).length === (randomStringArray[randomStringArray.length-1]).length ){//checks for end of typing             
         var endTime = performance.now();
-        userStringArray.splice(userStringArray.length-1,1);
+        console.log("ENDED");
+        console.log("Random String:");
+        console.log(randomStringArray);
+        console.log("User Typed String:");
         console.log(userStringArray);
         document.getElementById("inputText").disabled = true;
         document.querySelectorAll(".wordList").forEach(function(element){
@@ -95,4 +97,8 @@ function resetPage(){
         divElement.innerHTML += " ";
         
     });
+}
+
+function showInfo(){
+    window.alert("The timer doesn't start until the first key is clicked.\nThe last word typed must be the same amount of characters as the last word shown for the timer to stop.\n\nMade by Ryan Stongraber");
 }
